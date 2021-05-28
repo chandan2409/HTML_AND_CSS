@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            td {
+                width: 110px;
+            }
+            
+            fieldset {
+                width: 500px;
+            }
+            
+            span {
+                color: red;
+            }
+        </style>
+        <script src="Form.js"></script>
+    </head>
+    <body><center>
+        <form id="form">
+            <fieldset>
+                <legend>Personal Details</legend>
+                <table>
+                    <tr>
+                        <td>Roll No<span>*</span>:</td>
+                        <td><input type="number" id="rollNo" placeholder="Roll No" /></td>
+                    </tr>
+                    <tr>
+                        <td>First Name<span>*</span>:</td>
+                        <td><input type="text" id="firstName" placeholder="First Name" /></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name<span>*</span>:</td>
+                        <td><input type="text" id="lastName" placeholder="Last Name" /></td>
+                    </tr>
+                    <tr>
+                        <td>Email<span>*</span>:</td>
+                        <td><input type="text" id="email" placeholder="Email" name="email"/></td>
+                    </tr>
+                    <tr>
+                        <td>Age<span>*</span>:</td>
+                        <td><input type="number" id="age" placeholder="Age" /></td>
+                    </tr>
+                    <tr>
+                        <td>Date Of Birth<span>*</span>:</td>
+                        <td><input type="date" id="dob" placeholder="DOB" /></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile No<span>*</span>:</td>
+                        <td><input type="number" id="mobileNo" placeholder="Mobile No" /></td>
+                    </tr>
+                    <tr>
+                        <td>Occupation<span>*</span>:</td>
+                        <td>
+                            <select name="occupation" id="occupation">
+                                <option value="Private">Private</option>
+                                <option value="Student">Student</option>
+                                <option value="Public">Public</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender<span>*</span>: </td>
+                        <td>Male <input type="radio" name="gender" value="Male" id="male" /></td>
+                        <td>Female <input type="radio" name="gender" value="Female" id="female" /></td>
+                    </tr>
+                </table><br>
+                <button onclick="return validate()">Submit</button>
+            </fieldset>
+        </form><br><br>
+        <h2>Get Student Details</h2>
+        Roll No: <input type="number" id="getRoll"  placeholder="Roll No"/>
+        <button onClick="getStudent()">Get Student</button>
+        <p id="details"></p>
+
+    </center>
+    </body>
+</html>
