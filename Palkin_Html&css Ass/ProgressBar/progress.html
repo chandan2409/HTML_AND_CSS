@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+    <div class="main">
+        <input type= "range" min="0" max="100" value="50" id="slider">
+        <div id="selector">
+            <div class="selectBtn"></div>
+            <div id = "selectValue"></div>
+        </div>
+        <div id="progressBar"></div>
+    </div>
+        
+        <script>
+             var slider = document.getElementById("slider");
+             var selector = document.getElementById("selector");
+             var selectValue = document.getElementById("selectValue");
+             var progressBar = document.getElementById("progressBar");
+
+             selectValue.innerHTML = slider.value;
+
+
+             slider.oninput= function(){
+                selectValue.innerHTML = this.value;
+                 selector.style.left= this.value + "%";
+                 progressBar.style.width = this.value + "%";
+             }
+
+        </script>
+    </body>
+</html>
