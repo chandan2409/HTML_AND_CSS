@@ -1,0 +1,104 @@
+body {
+background-color: #fdfaf6;
+background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+.jumbotron {
+    
+    color: floralwhite;
+    background-color: black;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+}
+
+.main {
+  display : flex;
+}
+
+.p1 {
+    font-family: 'Pattaya', sans-serif;
+}
+
+.pic {
+  height : 200px;
+  width : 100px;
+  
+}
+
+.hfont {
+    font-family: 'Caveat', cursive;
+    font-family: 'Grandstander', cursive;
+  }
+
+  
+.carousel-item {
+    background: #aaa69d;
+  }
+
+  .carousel .carousel-item {
+    height: 300px;
+  }
+  .carousel .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+  }
+  #carouselButton {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+  }
+  .images {
+      height : 90px;
+      width: 50px;
+  }
+
+  .hobby {
+    margin-right: 400px;
+    margin-left: 300px;
+    
+  }
+  .cards{
+    display: flex;
+  }
+
+  .card {
+    margin-right: 20px;
+    box-shadow: 0 8px 6px -6px black;
+    /* height : 400px;
+    width : 300px; */
+  }
+  .card-body {
+    background-color: lightgrey;
+    border : 1px solid black;
+      
+  }
+
+.p-2 {
+  
+box-shadow: 0 8px 6px -6px gray;
+
+}
+
+
+.footer {
+  color : floralwhite;
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  display : flex;
+}
+
+.certifications {
+  margin: 20px;
+}
+
+.contact {
+  margin: 20px;
+  
+ 
+}
+
+.details {
+  margin :20px;
+}
