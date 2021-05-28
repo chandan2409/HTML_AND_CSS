@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 10px;
+  height: 100px;
+  background-color: red;
+  border-radius : 20px;
+  position: relative;
+}
+.animation {
+  width: 10px;
+  height: 100px;
+  background-color: red;
+  border-radius : 20px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {background-color:red;width:20%;}
+  25%  {background-color:yellow;width:40%;}
+  50%  {background-color:blue;width:60%; }
+  75%  {background-color:green;width:80%; }
+  100% {background-color:red;width:100%; }
+}
+</style>
+</head>
+<body>
+<h4>Click on Button to Start</h4>
+<button onclick="start()" >Start</button>
+<br><br>
+<div id = "start" ></div>
+</body>
+
+<script>
+
+function start()
+{
+console.log("AA");
+document.getElementById("start").className = "animation";
+myVar = setTimeout(alertFunc, 4100);
+}
+
+function alertFunc()
+{
+document.getElementById("start").classList.remove("animation");
+}
+
+</script>
+</html>
+
