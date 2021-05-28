@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Assignment</title>
+</head>
+<body>
+<form onsubmit="event.preventDefault()">
+FirstName : <input type="text" id="a" required><br>
+LastName : <input type="text" id="b" required><br>
+Age : <input type="number" id="c" min=0 max = 120 required><br>
+DOB : <input type="date" id="d" max="2021-05-20" required><br>
+<input type="submit" onclick="check()" >
+</form>
+</body>
+
+<script>
+
+document.getElementById("a").value=localStorage.getItem("firstname");
+document.getElementById("b").value=localStorage.getItem("lastname");
+document.getElementById("c").value=localStorage.getItem("age");
+document.getElementById("d").value=localStorage.getItem("date");
+console.log("Done");
+
+function check()
+{
+var firstname = document.getElementById("a").value;
+var lastname = document.getElementById("b").value;
+var age = document.getElementById("c").value;
+var date = document.getElementById("d").value;
+
+localStorage.setItem('firstname',firstname);
+localStorage.setItem('lastname',lastname);
+localStorage.setItem('age',age);
+localStorage.setItem('date',date);
+}
+</script>
+</html>
