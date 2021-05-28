@@ -1,0 +1,84 @@
+<html>
+<head>
+<link href="index.css" rel="stylesheet">
+<title>Get data from local storage</title>
+</head>
+<body>
+
+
+
+
+<div class="container1">
+    <center>
+    <h1>Click on Submit to retrive values from local storage</h1>
+</center>
+  <form  id="myAnchor">
+  <div class="row">
+    <div class="col-25">
+    <b>  <label for="fname">First Name</label></b>
+    </div>
+    <div class="col-50">
+      <input type="text" id="fname" name="firstname" placeholder="Your First name.." disabled required>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-25">
+     <b> <label for="lname">Last Name</label></b>
+    </div>
+    <div class="col-50">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name.." disabled required>
+    </div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-25">
+     <b> <label for="number">Mobile Number</label></b>
+    </div>
+    <div class="col-50">
+      <input type="tel" id="number" name="number" placeholder="Enter yout mobile number.."  pattern="[0-9]{10}" disabled required>
+    </div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-25">
+     <b> <label for="email">Email</label></b>
+    </div>
+    <div class="col-50">
+      <input type="email" id="email" name="email" placeholder="Enter you Email.." disabled required>
+    </div>
+  </div>
+<br>
+<div class="row">
+    <div class="col-25">
+     <b> <label for="State">State</label></b>
+    </div>
+    <div class="col-50">
+      <input type="text" id="state" name="state" placeholder="Enter you State.." disabled required>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-25">
+     <b> <label for="city">City</label></b>
+    </div>
+    <div class="col-50">
+      <input type="text" id="city" name="city" placeholder="Enter you City.." disabled required>
+    </div>
+  </div>
+
+<br>
+<br>
+    <center>
+  <div class="row">
+      <h3 style="color: rgb(255, 50, 50);">Click here to get values from local storage</h3>
+    <input type="submit" onclick="getValue()">
+  </div>
+</center>
+  </div>
+
+  </form>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
