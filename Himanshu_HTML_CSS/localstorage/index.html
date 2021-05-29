@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <center>
+        <h1>Form Demonstrating LocalStorage</h1>
+    <form style="margin-top: 50px ;border: 4px solid black; border-radius:10px; width : 400px; padding:50px;">
+        <input style="width :350px; height :20px; border :2px solid blue; border-radius : 5px;" type="text" id="name" placeholder="Enter Name">
+        <br><br>
+        <input style="width :350px; height :20px; border :2px solid blue; border-radius : 5px;" id = "roll" placeholder="Enter roll number">
+        <br><br>
+        <input style="width :350px; height :20px; border :2px solid blue; border-radius : 5px;" type="text" id = "subject" placeholder="Subject">
+        <br><br>
+        <input style="width :350px; height :20px; border :2px solid blue; border-radius : 5px;" type="number" id = "marks" placeholder="Enter Marks">
+        <br><br>
+        <input type = "button" value="Submit" onclick="addValue()">
+    </form>
+    <h3>Data fetched from localStorage</h3>
+    <div id = "res" style="margin-top: 10px ; width : 500px; height : 200px">
+
+    </div>
+    </center>
+</body>
+    <script>
+        function addValue(){
+            var namex = document.getElementById("name").value;
+            var rollx = document.getElementById("roll").value;
+            var subjectx = document.getElementById("subject").value;
+            var marksx = document.getElementById("marks").value;
+            var result = {name : namex, roll : rollx, subject : subjectx,marks : marksx};
+            console.log(result);
+            var res = JSON.stringify(result);
+            localStorage.setItem("data",res);
+            console.log(localStorage.getItem("data"));
+            document.getElementById("res").innerHTML += "<h2>"+localStorage.getItem("data")+"</h2>";
+        }
+    </script>
+</html>
